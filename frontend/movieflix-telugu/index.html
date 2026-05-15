@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieFlix</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    🎬 MovieFlix
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search movies...">
+  </div>
+</header>
+
+<div class="loader hidden" id="loader"></div>
+
+<section>
+  <h2 class="section-title">Popular Movies</h2>
+  <div class="movies-grid" id="hollywoodGrid"></div>
+</section>
+
+<section>
+  <h2 class="section-title">Telugu Movies</h2>
+  <div class="movies-grid" id="teluguGrid"></div>
+</section>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
