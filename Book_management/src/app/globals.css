@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B132B;
+  --foreground: #E0E1DD;
+  --accent: #00E5FF;
+  --secondary: #1C2541;
+  --moon: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --color-moon: var(--moon);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom glow effects */
+.glow-moon {
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.2);
+}
+
+.glow-wave {
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(28, 37, 65, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Wave animation placeholder */
+@keyframes wave {
+  0% { transform: translateX(0) translateZ(0) scaleY(1) }
+  50% { transform: translateX(-25%) translateZ(0) scaleY(0.8) }
+  100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
+}
+
+.wave-animation {
+  animation: wave 15s linear infinite;
+}
